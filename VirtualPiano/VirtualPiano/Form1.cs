@@ -22,18 +22,39 @@ namespace VirtualPiano
             outputDevice.Play();
         }
 
-
-        //private void Form1_KeyDown(object sender, KeyEventArgs e)
-        //{
-        //    //e.Handled = true;
-        //    //switch (e.KeyCode)
-        //    //{
-        //    //  //  case Keys.A: Button1_Click(null, null); break;
-        //    // //   case Keys.S: button2_Click(null, null); break;
-        //    // //   case Keys.D: button3_Click(null, null); break;
-        //    //    default: e.Handled = true; break;
-        //    //};
-        //}
+        private void Form1_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+            switch (e.KeyCode)
+            {
+                case Keys.Z: C4Key_Click(null, null); break;
+                case Keys.S: Cis4Key_Click(null, null); break;
+                case Keys.X: D4Key_Click(null, null); break;
+                case Keys.D: Dis4Key_Click(null, null); break;
+                case Keys.C: E4Key_Click(null, null); break;
+                case Keys.V: F4Key_Click(null, null); break;
+                case Keys.G: Fis4Key_Click(null, null); break;
+                case Keys.B: G4Key_Click(null, null); break;
+                case Keys.H: Gis4Key_Click(null, null); break;
+                case Keys.N: A4Key_Click(null, null); break;
+                case Keys.J: Ais4Key_Click(null, null); break;
+                case Keys.M: B4Key_Click(null, null); break;
+                case Keys.Q: C5Key_Click(null, null); break;
+                case Keys.D2: Cis5Key_Click(null, null); break;
+                case Keys.W: D5Key_Click(null, null); break;
+                case Keys.D3: Dis5Key_Click(null, null); break;
+                case Keys.E: E5Key_Click(null, null); break;
+                case Keys.R: F5Key_Click(null, null); break;
+                case Keys.D5: Fis5Key_Click(null, null); break;
+                case Keys.T: G5Key_Click(null, null); break;
+                case Keys.D6: Gis5Key_Click(null, null); break;
+                case Keys.Y: A5Key_Click(null, null); break;
+                case Keys.D7: Ais5Key_Click(null, null); break;
+                case Keys.U: B5Key_Click(null, null); break;
+                case Keys.I: C6Key_Click(null, null); break;
+                default: e.Handled = true; break;
+            };
+        }
 
         private void C4Key_Click(object sender, EventArgs e)
         {
@@ -182,6 +203,5 @@ namespace VirtualPiano
             audioFile = new WaveFileReader(Properties.Resources._25C6);
             mixer.AddMixerInput(audioFile);
         }
-
     }
 }
