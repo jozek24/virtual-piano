@@ -29,287 +29,335 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
+            this.c6Key = new System.Windows.Forms.Button();
+            this.ais5Key = new System.Windows.Forms.Button();
+            this.gis5Key = new System.Windows.Forms.Button();
+            this.fis5Key = new System.Windows.Forms.Button();
+            this.dis5Key = new System.Windows.Forms.Button();
+            this.cis5Key = new System.Windows.Forms.Button();
+            this.ais4Key = new System.Windows.Forms.Button();
+            this.gis4Key = new System.Windows.Forms.Button();
+            this.dis4Key = new System.Windows.Forms.Button();
+            this.fis4Key = new System.Windows.Forms.Button();
+            this.cis4Key = new System.Windows.Forms.Button();
+            this.b5Key = new System.Windows.Forms.Button();
+            this.a5Key = new System.Windows.Forms.Button();
+            this.g5Key = new System.Windows.Forms.Button();
+            this.f5Key = new System.Windows.Forms.Button();
+            this.e5Key = new System.Windows.Forms.Button();
+            this.d5Key = new System.Windows.Forms.Button();
+            this.c5Key = new System.Windows.Forms.Button();
+            this.b4Key = new System.Windows.Forms.Button();
+            this.f4Key = new System.Windows.Forms.Button();
+            this.g4Key = new System.Windows.Forms.Button();
+            this.a4Key = new System.Windows.Forms.Button();
+            this.e4Key = new System.Windows.Forms.Button();
+            this.d4Key = new System.Windows.Forms.Button();
+            this.c4Key = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.panel1.Controls.Add(this.button24);
-            this.panel1.Controls.Add(this.button23);
-            this.panel1.Controls.Add(this.button22);
-            this.panel1.Controls.Add(this.button21);
-            this.panel1.Controls.Add(this.button20);
-            this.panel1.Controls.Add(this.button18);
-            this.panel1.Controls.Add(this.button17);
-            this.panel1.Controls.Add(this.button19);
-            this.panel1.Controls.Add(this.button16);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button13);
-            this.panel1.Controls.Add(this.button12);
-            this.panel1.Controls.Add(this.button11);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(24, 98);
+            this.panel1.Controls.Add(this.c6Key);
+            this.panel1.Controls.Add(this.ais5Key);
+            this.panel1.Controls.Add(this.gis5Key);
+            this.panel1.Controls.Add(this.fis5Key);
+            this.panel1.Controls.Add(this.dis5Key);
+            this.panel1.Controls.Add(this.cis5Key);
+            this.panel1.Controls.Add(this.ais4Key);
+            this.panel1.Controls.Add(this.gis4Key);
+            this.panel1.Controls.Add(this.dis4Key);
+            this.panel1.Controls.Add(this.fis4Key);
+            this.panel1.Controls.Add(this.cis4Key);
+            this.panel1.Controls.Add(this.b5Key);
+            this.panel1.Controls.Add(this.a5Key);
+            this.panel1.Controls.Add(this.g5Key);
+            this.panel1.Controls.Add(this.f5Key);
+            this.panel1.Controls.Add(this.e5Key);
+            this.panel1.Controls.Add(this.d5Key);
+            this.panel1.Controls.Add(this.c5Key);
+            this.panel1.Controls.Add(this.b4Key);
+            this.panel1.Controls.Add(this.f4Key);
+            this.panel1.Controls.Add(this.g4Key);
+            this.panel1.Controls.Add(this.a4Key);
+            this.panel1.Controls.Add(this.e4Key);
+            this.panel1.Controls.Add(this.d4Key);
+            this.panel1.Controls.Add(this.c4Key);
+            this.panel1.Location = new System.Drawing.Point(12, 98);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1241, 372);
+            this.panel1.Size = new System.Drawing.Size(1330, 372);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // c6Key
             // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 372);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.c6Key.Location = new System.Drawing.Point(1246, 0);
+            this.c6Key.Name = "c6Key";
+            this.c6Key.Size = new System.Drawing.Size(83, 372);
+            this.c6Key.TabIndex = 14;
+            this.c6Key.Text = "button14";
+            this.c6Key.UseVisualStyleBackColor = true;
+            this.c6Key.Click += new System.EventHandler(this.C6Key_Click);
             // 
-            // button2
+            // ais5Key
             // 
-            this.button2.Location = new System.Drawing.Point(89, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(83, 372);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ais5Key.BackColor = System.Drawing.Color.Black;
+            this.ais5Key.Location = new System.Drawing.Point(1121, 0);
+            this.ais5Key.Name = "ais5Key";
+            this.ais5Key.Size = new System.Drawing.Size(67, 285);
+            this.ais5Key.TabIndex = 17;
+            this.ais5Key.Text = "button24";
+            this.ais5Key.UseVisualStyleBackColor = false;
+            this.ais5Key.Click += new System.EventHandler(this.Ais5Key_Click);
             // 
-            // button3
+            // gis5Key
             // 
-            this.button3.Location = new System.Drawing.Point(178, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(83, 372);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.gis5Key.BackColor = System.Drawing.Color.Black;
+            this.gis5Key.Location = new System.Drawing.Point(1031, 0);
+            this.gis5Key.Name = "gis5Key";
+            this.gis5Key.Size = new System.Drawing.Size(67, 285);
+            this.gis5Key.TabIndex = 16;
+            this.gis5Key.Text = "button24";
+            this.gis5Key.UseVisualStyleBackColor = false;
+            this.gis5Key.Click += new System.EventHandler(this.Gis5Key_Click);
             // 
-            // button4
+            // fis5Key
             // 
-            this.button4.Location = new System.Drawing.Point(267, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(83, 372);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.fis5Key.BackColor = System.Drawing.Color.Black;
+            this.fis5Key.Location = new System.Drawing.Point(943, 0);
+            this.fis5Key.Name = "fis5Key";
+            this.fis5Key.Size = new System.Drawing.Size(67, 285);
+            this.fis5Key.TabIndex = 16;
+            this.fis5Key.Text = "button23";
+            this.fis5Key.UseVisualStyleBackColor = false;
+            this.fis5Key.Click += new System.EventHandler(this.Fis5Key_Click);
             // 
-            // button5
+            // dis5Key
             // 
-            this.button5.Location = new System.Drawing.Point(356, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(83, 372);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.dis5Key.BackColor = System.Drawing.Color.Black;
+            this.dis5Key.Location = new System.Drawing.Point(764, 0);
+            this.dis5Key.Name = "dis5Key";
+            this.dis5Key.Size = new System.Drawing.Size(67, 285);
+            this.dis5Key.TabIndex = 16;
+            this.dis5Key.Text = "button22";
+            this.dis5Key.UseVisualStyleBackColor = false;
+            this.dis5Key.Click += new System.EventHandler(this.Dis5Key_Click);
             // 
-            // button6
+            // cis5Key
             // 
-            this.button6.Location = new System.Drawing.Point(445, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(83, 372);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
+            this.cis5Key.BackColor = System.Drawing.Color.Black;
+            this.cis5Key.Location = new System.Drawing.Point(676, 0);
+            this.cis5Key.Name = "cis5Key";
+            this.cis5Key.Size = new System.Drawing.Size(67, 285);
+            this.cis5Key.TabIndex = 16;
+            this.cis5Key.Text = "button21";
+            this.cis5Key.UseVisualStyleBackColor = false;
+            this.cis5Key.Click += new System.EventHandler(this.Cis5Key_Click);
             // 
-            // button7
+            // ais4Key
             // 
-            this.button7.Location = new System.Drawing.Point(534, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(83, 372);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
+            this.ais4Key.BackColor = System.Drawing.Color.Black;
+            this.ais4Key.Location = new System.Drawing.Point(498, 0);
+            this.ais4Key.Name = "ais4Key";
+            this.ais4Key.Size = new System.Drawing.Size(67, 285);
+            this.ais4Key.TabIndex = 15;
+            this.ais4Key.Text = "button20";
+            this.ais4Key.UseVisualStyleBackColor = false;
+            this.ais4Key.Click += new System.EventHandler(this.Ais4Key_Click);
             // 
-            // button8
+            // gis4Key
             // 
-            this.button8.Location = new System.Drawing.Point(623, 0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(83, 372);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
+            this.gis4Key.BackColor = System.Drawing.Color.Black;
+            this.gis4Key.Location = new System.Drawing.Point(409, 0);
+            this.gis4Key.Name = "gis4Key";
+            this.gis4Key.Size = new System.Drawing.Size(67, 285);
+            this.gis4Key.TabIndex = 4;
+            this.gis4Key.Text = "button18";
+            this.gis4Key.UseVisualStyleBackColor = false;
+            this.gis4Key.Click += new System.EventHandler(this.Gis4Key_Click);
             // 
-            // button9
+            // dis4Key
             // 
-            this.button9.Location = new System.Drawing.Point(712, 0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(83, 372);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
+            this.dis4Key.BackColor = System.Drawing.Color.Black;
+            this.dis4Key.Location = new System.Drawing.Point(141, 0);
+            this.dis4Key.Name = "dis4Key";
+            this.dis4Key.Size = new System.Drawing.Size(67, 285);
+            this.dis4Key.TabIndex = 2;
+            this.dis4Key.Text = "button17";
+            this.dis4Key.UseVisualStyleBackColor = false;
+            this.dis4Key.Click += new System.EventHandler(this.Dis4Key_Click);
             // 
-            // button10
+            // fis4Key
             // 
-            this.button10.Location = new System.Drawing.Point(801, 0);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(83, 372);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
+            this.fis4Key.BackColor = System.Drawing.Color.Black;
+            this.fis4Key.Location = new System.Drawing.Point(319, 0);
+            this.fis4Key.Name = "fis4Key";
+            this.fis4Key.Size = new System.Drawing.Size(67, 285);
+            this.fis4Key.TabIndex = 3;
+            this.fis4Key.Text = "button19";
+            this.fis4Key.UseVisualStyleBackColor = false;
+            this.fis4Key.Click += new System.EventHandler(this.Fis4Key_Click);
             // 
-            // button11
+            // cis4Key
             // 
-            this.button11.Location = new System.Drawing.Point(890, 0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(83, 372);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
+            this.cis4Key.BackColor = System.Drawing.Color.Black;
+            this.cis4Key.Location = new System.Drawing.Point(51, 0);
+            this.cis4Key.Name = "cis4Key";
+            this.cis4Key.Size = new System.Drawing.Size(67, 285);
+            this.cis4Key.TabIndex = 1;
+            this.cis4Key.Text = "button16";
+            this.cis4Key.UseVisualStyleBackColor = false;
+            this.cis4Key.Click += new System.EventHandler(this.Cis4Key_Click);
             // 
-            // button12
+            // b5Key
             // 
-            this.button12.Location = new System.Drawing.Point(979, 0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(83, 372);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
+            this.b5Key.Location = new System.Drawing.Point(1157, 0);
+            this.b5Key.Name = "b5Key";
+            this.b5Key.Size = new System.Drawing.Size(83, 372);
+            this.b5Key.TabIndex = 13;
+            this.b5Key.Text = "button14";
+            this.b5Key.UseVisualStyleBackColor = true;
+            this.b5Key.Click += new System.EventHandler(this.B5Key_Click);
             // 
-            // button13
+            // a5Key
             // 
-            this.button13.Location = new System.Drawing.Point(1068, 0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(83, 372);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
+            this.a5Key.Location = new System.Drawing.Point(1068, 0);
+            this.a5Key.Name = "a5Key";
+            this.a5Key.Size = new System.Drawing.Size(83, 372);
+            this.a5Key.TabIndex = 12;
+            this.a5Key.Text = "button13";
+            this.a5Key.UseVisualStyleBackColor = true;
+            this.a5Key.Click += new System.EventHandler(this.A5Key_Click);
             // 
-            // button14
+            // g5Key
             // 
-            this.button14.Location = new System.Drawing.Point(1157, 0);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(83, 372);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
+            this.g5Key.Location = new System.Drawing.Point(979, 0);
+            this.g5Key.Name = "g5Key";
+            this.g5Key.Size = new System.Drawing.Size(83, 372);
+            this.g5Key.TabIndex = 11;
+            this.g5Key.Text = "button12";
+            this.g5Key.UseVisualStyleBackColor = true;
+            this.g5Key.Click += new System.EventHandler(this.G5Key_Click);
             // 
-            // button16
+            // f5Key
             // 
-            this.button16.BackColor = System.Drawing.Color.Black;
-            this.button16.Location = new System.Drawing.Point(51, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(67, 285);
-            this.button16.TabIndex = 1;
-            this.button16.Text = "button16";
-            this.button16.UseVisualStyleBackColor = false;
+            this.f5Key.Location = new System.Drawing.Point(890, 0);
+            this.f5Key.Name = "f5Key";
+            this.f5Key.Size = new System.Drawing.Size(83, 372);
+            this.f5Key.TabIndex = 10;
+            this.f5Key.Text = "button11";
+            this.f5Key.UseVisualStyleBackColor = true;
+            this.f5Key.Click += new System.EventHandler(this.F5Key_Click);
             // 
-            // button17
+            // e5Key
             // 
-            this.button17.BackColor = System.Drawing.Color.Black;
-            this.button17.Location = new System.Drawing.Point(141, 0);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(67, 285);
-            this.button17.TabIndex = 2;
-            this.button17.Text = "button17";
-            this.button17.UseVisualStyleBackColor = false;
+            this.e5Key.Location = new System.Drawing.Point(801, 0);
+            this.e5Key.Name = "e5Key";
+            this.e5Key.Size = new System.Drawing.Size(83, 372);
+            this.e5Key.TabIndex = 9;
+            this.e5Key.Text = "button10";
+            this.e5Key.UseVisualStyleBackColor = true;
+            this.e5Key.Click += new System.EventHandler(this.E5Key_Click);
             // 
-            // button18
+            // d5Key
             // 
-            this.button18.BackColor = System.Drawing.Color.Black;
-            this.button18.Location = new System.Drawing.Point(409, 0);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(67, 285);
-            this.button18.TabIndex = 4;
-            this.button18.Text = "button18";
-            this.button18.UseVisualStyleBackColor = false;
+            this.d5Key.Location = new System.Drawing.Point(712, 0);
+            this.d5Key.Name = "d5Key";
+            this.d5Key.Size = new System.Drawing.Size(83, 372);
+            this.d5Key.TabIndex = 8;
+            this.d5Key.Text = "button9";
+            this.d5Key.UseVisualStyleBackColor = true;
+            this.d5Key.Click += new System.EventHandler(this.D5Key_Click);
             // 
-            // button19
+            // c5Key
             // 
-            this.button19.BackColor = System.Drawing.Color.Black;
-            this.button19.Location = new System.Drawing.Point(319, 0);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(67, 285);
-            this.button19.TabIndex = 3;
-            this.button19.Text = "button19";
-            this.button19.UseVisualStyleBackColor = false;
+            this.c5Key.Location = new System.Drawing.Point(623, 0);
+            this.c5Key.Name = "c5Key";
+            this.c5Key.Size = new System.Drawing.Size(83, 372);
+            this.c5Key.TabIndex = 7;
+            this.c5Key.Text = "button8";
+            this.c5Key.UseVisualStyleBackColor = true;
+            this.c5Key.Click += new System.EventHandler(this.C5Key_Click);
             // 
-            // button20
+            // b4Key
             // 
-            this.button20.BackColor = System.Drawing.Color.Black;
-            this.button20.Location = new System.Drawing.Point(498, 0);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(67, 285);
-            this.button20.TabIndex = 15;
-            this.button20.Text = "button20";
-            this.button20.UseVisualStyleBackColor = false;
+            this.b4Key.Location = new System.Drawing.Point(534, 0);
+            this.b4Key.Name = "b4Key";
+            this.b4Key.Size = new System.Drawing.Size(83, 372);
+            this.b4Key.TabIndex = 6;
+            this.b4Key.Text = "button7";
+            this.b4Key.UseVisualStyleBackColor = true;
+            this.b4Key.Click += new System.EventHandler(this.B4Key_Click);
             // 
-            // button21
+            // f4Key
             // 
-            this.button21.BackColor = System.Drawing.Color.Black;
-            this.button21.Location = new System.Drawing.Point(676, 0);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(67, 285);
-            this.button21.TabIndex = 16;
-            this.button21.Text = "button21";
-            this.button21.UseVisualStyleBackColor = false;
+            this.f4Key.Location = new System.Drawing.Point(267, 0);
+            this.f4Key.Name = "f4Key";
+            this.f4Key.Size = new System.Drawing.Size(83, 372);
+            this.f4Key.TabIndex = 5;
+            this.f4Key.Text = "button4";
+            this.f4Key.UseVisualStyleBackColor = true;
+            this.f4Key.Click += new System.EventHandler(this.F4Key_Click);
             // 
-            // button22
+            // g4Key
             // 
-            this.button22.BackColor = System.Drawing.Color.Black;
-            this.button22.Location = new System.Drawing.Point(764, 0);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(67, 285);
-            this.button22.TabIndex = 16;
-            this.button22.Text = "button22";
-            this.button22.UseVisualStyleBackColor = false;
+            this.g4Key.Location = new System.Drawing.Point(356, 0);
+            this.g4Key.Name = "g4Key";
+            this.g4Key.Size = new System.Drawing.Size(83, 372);
+            this.g4Key.TabIndex = 4;
+            this.g4Key.Text = "button5";
+            this.g4Key.UseVisualStyleBackColor = true;
+            this.g4Key.Click += new System.EventHandler(this.G4Key_Click);
             // 
-            // button23
+            // a4Key
             // 
-            this.button23.BackColor = System.Drawing.Color.Black;
-            this.button23.Location = new System.Drawing.Point(943, 0);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(67, 285);
-            this.button23.TabIndex = 16;
-            this.button23.Text = "button23";
-            this.button23.UseVisualStyleBackColor = false;
+            this.a4Key.Location = new System.Drawing.Point(445, 0);
+            this.a4Key.Name = "a4Key";
+            this.a4Key.Size = new System.Drawing.Size(83, 372);
+            this.a4Key.TabIndex = 3;
+            this.a4Key.Text = "button6";
+            this.a4Key.UseVisualStyleBackColor = true;
+            this.a4Key.Click += new System.EventHandler(this.A4Key_Click);
             // 
-            // button24
+            // e4Key
             // 
-            this.button24.BackColor = System.Drawing.Color.Black;
-            this.button24.Location = new System.Drawing.Point(1031, 0);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(67, 285);
-            this.button24.TabIndex = 16;
-            this.button24.Text = "button24";
-            this.button24.UseVisualStyleBackColor = false;
+            this.e4Key.Location = new System.Drawing.Point(178, 0);
+            this.e4Key.Name = "e4Key";
+            this.e4Key.Size = new System.Drawing.Size(83, 372);
+            this.e4Key.TabIndex = 2;
+            this.e4Key.Text = "button3";
+            this.e4Key.UseVisualStyleBackColor = true;
+            this.e4Key.Click += new System.EventHandler(this.E4Key_Click);
+            // 
+            // d4Key
+            // 
+            this.d4Key.Location = new System.Drawing.Point(89, 0);
+            this.d4Key.Name = "d4Key";
+            this.d4Key.Size = new System.Drawing.Size(83, 372);
+            this.d4Key.TabIndex = 1;
+            this.d4Key.Text = "button2";
+            this.d4Key.UseVisualStyleBackColor = true;
+            this.d4Key.Click += new System.EventHandler(this.D4Key_Click);
+            // 
+            // c4Key
+            // 
+            this.c4Key.Location = new System.Drawing.Point(0, 0);
+            this.c4Key.Name = "c4Key";
+            this.c4Key.Size = new System.Drawing.Size(83, 372);
+            this.c4Key.TabIndex = 0;
+            this.c4Key.Text = "button1";
+            this.c4Key.UseVisualStyleBackColor = true;
+            this.c4Key.Click += new System.EventHandler(this.C4Key_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(1277, 482);
+            this.ClientSize = new System.Drawing.Size(1349, 482);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
@@ -320,29 +368,31 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button b5Key;
+        private System.Windows.Forms.Button a5Key;
+        private System.Windows.Forms.Button g5Key;
+        private System.Windows.Forms.Button f5Key;
+        private System.Windows.Forms.Button e5Key;
+        private System.Windows.Forms.Button d5Key;
+        private System.Windows.Forms.Button c5Key;
+        private System.Windows.Forms.Button b4Key;
+        private System.Windows.Forms.Button f4Key;
+        private System.Windows.Forms.Button g4Key;
+        private System.Windows.Forms.Button a4Key;
+        private System.Windows.Forms.Button e4Key;
+        private System.Windows.Forms.Button d4Key;
+        private System.Windows.Forms.Button c4Key;
+        private System.Windows.Forms.Button gis5Key;
+        private System.Windows.Forms.Button fis5Key;
+        private System.Windows.Forms.Button dis5Key;
+        private System.Windows.Forms.Button cis5Key;
+        private System.Windows.Forms.Button ais4Key;
+        private System.Windows.Forms.Button gis4Key;
+        private System.Windows.Forms.Button dis4Key;
+        private System.Windows.Forms.Button fis4Key;
+        private System.Windows.Forms.Button cis4Key;
+        private System.Windows.Forms.Button c6Key;
+        private System.Windows.Forms.Button ais5Key;
     }
 }
 
