@@ -54,7 +54,11 @@
             this.e4Key = new System.Windows.Forms.Button();
             this.d4Key = new System.Windows.Forms.Button();
             this.c4Key = new System.Windows.Forms.Button();
+            this.tembreBox = new System.Windows.Forms.GroupBox();
+            this.grandPianoCheckBox = new System.Windows.Forms.CheckBox();
+            this.SynthesizedCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
+            this.tembreBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,7 +116,7 @@
             this.ais5Key.BackColor = System.Drawing.Color.Black;
             this.ais5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ais5Key.ForeColor = System.Drawing.Color.White;
-            this.ais5Key.Location = new System.Drawing.Point(1066, 0);
+            this.ais5Key.Location = new System.Drawing.Point(1060, 0);
             this.ais5Key.Name = "ais5Key";
             this.ais5Key.Size = new System.Drawing.Size(64, 285);
             this.ais5Key.TabIndex = 17;
@@ -127,7 +131,7 @@
             this.gis5Key.BackColor = System.Drawing.Color.Black;
             this.gis5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gis5Key.ForeColor = System.Drawing.Color.White;
-            this.gis5Key.Location = new System.Drawing.Point(981, 0);
+            this.gis5Key.Location = new System.Drawing.Point(977, 0);
             this.gis5Key.Name = "gis5Key";
             this.gis5Key.Size = new System.Drawing.Size(64, 285);
             this.gis5Key.TabIndex = 16;
@@ -142,7 +146,7 @@
             this.fis5Key.BackColor = System.Drawing.Color.Black;
             this.fis5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fis5Key.ForeColor = System.Drawing.Color.White;
-            this.fis5Key.Location = new System.Drawing.Point(894, 0);
+            this.fis5Key.Location = new System.Drawing.Point(893, 0);
             this.fis5Key.Name = "fis5Key";
             this.fis5Key.Size = new System.Drawing.Size(64, 285);
             this.fis5Key.TabIndex = 16;
@@ -172,7 +176,7 @@
             this.cis5Key.BackColor = System.Drawing.Color.Black;
             this.cis5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cis5Key.ForeColor = System.Drawing.Color.White;
-            this.cis5Key.Location = new System.Drawing.Point(643, 0);
+            this.cis5Key.Location = new System.Drawing.Point(640, 0);
             this.cis5Key.Name = "cis5Key";
             this.cis5Key.Size = new System.Drawing.Size(64, 285);
             this.cis5Key.TabIndex = 16;
@@ -217,7 +221,7 @@
             this.dis4Key.BackColor = System.Drawing.Color.Black;
             this.dis4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dis4Key.ForeColor = System.Drawing.Color.White;
-            this.dis4Key.Location = new System.Drawing.Point(140, 0);
+            this.dis4Key.Location = new System.Drawing.Point(136, 0);
             this.dis4Key.Name = "dis4Key";
             this.dis4Key.Size = new System.Drawing.Size(64, 285);
             this.dis4Key.TabIndex = 2;
@@ -232,7 +236,7 @@
             this.fis4Key.BackColor = System.Drawing.Color.Black;
             this.fis4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fis4Key.ForeColor = System.Drawing.Color.White;
-            this.fis4Key.Location = new System.Drawing.Point(308, 0);
+            this.fis4Key.Location = new System.Drawing.Point(304, 0);
             this.fis4Key.Name = "fis4Key";
             this.fis4Key.Size = new System.Drawing.Size(64, 285);
             this.fis4Key.TabIndex = 3;
@@ -495,12 +499,47 @@
             this.c4Key.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C4Key_MouseDown);
             this.c4Key.MouseUp += new System.Windows.Forms.MouseEventHandler(this.C4Key_MouseUp);
             // 
+            // tembreBox
+            // 
+            this.tembreBox.Controls.Add(this.SynthesizedCheckBox);
+            this.tembreBox.Controls.Add(this.grandPianoCheckBox);
+            this.tembreBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tembreBox.Location = new System.Drawing.Point(22, 13);
+            this.tembreBox.Name = "tembreBox";
+            this.tembreBox.Size = new System.Drawing.Size(336, 67);
+            this.tembreBox.TabIndex = 1;
+            this.tembreBox.TabStop = false;
+            this.tembreBox.Text = "Tembre";
+            // 
+            // grandPianoCheckBox
+            // 
+            this.grandPianoCheckBox.AutoSize = true;
+            this.grandPianoCheckBox.Location = new System.Drawing.Point(7, 22);
+            this.grandPianoCheckBox.Name = "grandPianoCheckBox";
+            this.grandPianoCheckBox.Size = new System.Drawing.Size(110, 21);
+            this.grandPianoCheckBox.TabIndex = 0;
+            this.grandPianoCheckBox.Text = "Grand Piano";
+            this.grandPianoCheckBox.UseVisualStyleBackColor = true;
+            this.grandPianoCheckBox.CheckedChanged += new System.EventHandler(this.GrandPianoCheckBox_CheckedChanged);
+            // 
+            // SynthesizedCheckBox
+            // 
+            this.SynthesizedCheckBox.AutoSize = true;
+            this.SynthesizedCheckBox.Location = new System.Drawing.Point(136, 21);
+            this.SynthesizedCheckBox.Name = "SynthesizedCheckBox";
+            this.SynthesizedCheckBox.Size = new System.Drawing.Size(147, 21);
+            this.SynthesizedCheckBox.TabIndex = 1;
+            this.SynthesizedCheckBox.Text = "Synthesized Piano";
+            this.SynthesizedCheckBox.UseVisualStyleBackColor = true;
+            this.SynthesizedCheckBox.CheckedChanged += new System.EventHandler(this.SynthesizedCheckBox_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1316, 467);
+            this.Controls.Add(this.tembreBox);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
             this.Name = "Form1";
@@ -508,6 +547,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
+            this.tembreBox.ResumeLayout(false);
+            this.tembreBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -540,6 +581,9 @@
         private System.Windows.Forms.Button cis4Key;
         private System.Windows.Forms.Button c6Key;
         private System.Windows.Forms.Button ais5Key;
+        private System.Windows.Forms.GroupBox tembreBox;
+        private System.Windows.Forms.CheckBox SynthesizedCheckBox;
+        private System.Windows.Forms.CheckBox grandPianoCheckBox;
     }
 }
 

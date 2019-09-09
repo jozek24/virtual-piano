@@ -11,44 +11,24 @@ namespace VirtualPiano
     {
         Dictionary<string, bool> isPressed = new Dictionary<string, bool>()
         {
-            {"C4",false },
-            { "Cis4",false },
-            { "D4",false },
-            { "Dis4",false },
-            { "E4",false },
-            { "F4",false },
-            { "Fis4",false },
-            { "G4",false },
-            { "Gis4",false },
-            { "A4",false },
-            { "Ais4",false },
-            { "B4",false },
-            { "C5",false },
-            { "Cis5",false },
-            { "D5",false },
-            { "Dis5",false },
-            { "E5",false },
-            { "F5",false },
-            { "Fis5",false },
-            { "G5",false },
-            { "Gis5",false },
-            { "A5",false },
-            { "Ais5",false },
-            { "B5",false },
+            {"C4",false }, { "Cis4",false }, { "D4",false },{ "Dis4",false },
+            { "E4",false }, { "F4",false },  { "Fis4",false }, { "G4",false },
+            { "Gis4",false },{ "A4",false },{ "Ais4",false }, { "B4",false },
+            { "C5",false }, { "Cis5",false },{ "D5",false },{ "Dis5",false },
+            { "E5",false }, { "F5",false },{ "Fis5",false }, { "G5",false },
+            { "Gis5",false }, { "A5",false },{ "Ais5",false }, { "B5",false },
             { "C6",false }
-
         };
         private WaveOutEvent outputDevice;
-        private WaveFileReader audioFile;
+        private ISampleProvider sampleProvider;
         private MixingSampleProvider mixer;
+
+        string tembre = "GrandPiano";
 
         public Form1()
         {
             InitializeComponent();
-
-           
-
-
+            grandPianoCheckBox.Checked = true;
             outputDevice = new WaveOutEvent();
             mixer = new MixingSampleProvider(WaveFormat.CreateIeeeFloatWaveFormat(44100, 2))
             {
@@ -57,12 +37,11 @@ namespace VirtualPiano
             outputDevice.Init(mixer);
             outputDevice.Play();
         }
-
         private void Form1_KeyDown_1(object sender, KeyEventArgs e)
         {
             e.Handled = true;
-            
-            
+
+
             switch (e.KeyCode)
             {
                 case Keys.Z: C4Key_MouseDown(null, null); break;
@@ -93,8 +72,6 @@ namespace VirtualPiano
                 default: e.Handled = true; break;
             };
         }
-
-       
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             e.Handled = true;
@@ -129,13 +106,14 @@ namespace VirtualPiano
                 default: e.Handled = true; break;
             };
         }
-    
+
         private void C4Key_MouseDown(object sender, MouseEventArgs e)
         {
+
             if (isPressed["C4"] == true) return;
             isPressed["C4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._1C4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C3.wav");
+            mixer.AddMixerInput(sampleProvider);
             c4Key.BackColor = Color.LightBlue;
         }
 
@@ -144,14 +122,16 @@ namespace VirtualPiano
         {
             isPressed["C4"] = false;
             c4Key.BackColor = Color.White;
+            //   mixer.RemoveMixerInput(sampleProvider);   //to stop sound when mouseUp
         }
 
         private void Cis4Key_MouseDown(object sender, MouseEventArgs e)
         {
             if (isPressed["Cis4"] == true) return;
             isPressed["Cis4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._2Cis4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C#3.wav");
+
+            mixer.AddMixerInput(sampleProvider);
             cis4Key.BackColor = Color.LightBlue;
         }
 
@@ -165,8 +145,9 @@ namespace VirtualPiano
         {
             if (isPressed["D4"] == true) return;
             isPressed["D4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._3D4);
-            mixer.AddMixerInput(audioFile);
+
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D3.wav");
+            mixer.AddMixerInput(sampleProvider);
             d4Key.BackColor = Color.LightBlue;
         }
 
@@ -180,8 +161,9 @@ namespace VirtualPiano
         {
             if (isPressed["Dis4"] == true) return;
             isPressed["Dis4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._4Dis4);
-            mixer.AddMixerInput(audioFile);
+
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D#3.wav");
+            mixer.AddMixerInput(sampleProvider);
             dis4Key.BackColor = Color.LightBlue;
         }
 
@@ -195,8 +177,8 @@ namespace VirtualPiano
         {
             if (isPressed["E4"] == true) return;
             isPressed["E4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._5E4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\E3.wav");
+            mixer.AddMixerInput(sampleProvider);
             e4Key.BackColor = Color.LightBlue;
         }
 
@@ -210,8 +192,8 @@ namespace VirtualPiano
         {
             if (isPressed["F4"] == true) return;
             isPressed["F4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._6F4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F3.wav");
+            mixer.AddMixerInput(sampleProvider);
             f4Key.BackColor = Color.LightBlue;
         }
 
@@ -225,8 +207,8 @@ namespace VirtualPiano
         {
             if (isPressed["Fis4"] == true) return;
             isPressed["Fis4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._7Fis4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F#3.wav");
+            mixer.AddMixerInput(sampleProvider);
             fis4Key.BackColor = Color.LightBlue;
         }
 
@@ -240,8 +222,8 @@ namespace VirtualPiano
         {
             if (isPressed["G4"] == true) return;
             isPressed["G4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._8G4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G3.wav");
+            mixer.AddMixerInput(sampleProvider);
             g4Key.BackColor = Color.LightBlue;
         }
 
@@ -255,8 +237,8 @@ namespace VirtualPiano
         {
             if (isPressed["Gis4"] == true) return;
             isPressed["Gis4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._9Gis4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G#3.wav");
+            mixer.AddMixerInput(sampleProvider);
             gis4Key.BackColor = Color.LightBlue;
         }
 
@@ -270,8 +252,8 @@ namespace VirtualPiano
         {
             if (isPressed["A4"] == true) return;
             isPressed["A4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._10A4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A3.wav");
+            mixer.AddMixerInput(sampleProvider);
             a4Key.BackColor = Color.LightBlue;
         }
 
@@ -285,8 +267,8 @@ namespace VirtualPiano
         {
             if (isPressed["Ais4"] == true) return;
             isPressed["Ais4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._11Ais4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A#3.wav");
+            mixer.AddMixerInput(sampleProvider);
             ais4Key.BackColor = Color.LightBlue;
         }
 
@@ -300,8 +282,8 @@ namespace VirtualPiano
         {
             if (isPressed["B4"] == true) return;
             isPressed["B4"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._12B4);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\B3.wav");
+            mixer.AddMixerInput(sampleProvider);
             b4Key.BackColor = Color.LightBlue;
         }
 
@@ -315,8 +297,8 @@ namespace VirtualPiano
         {
             if (isPressed["C5"] == true) return;
             isPressed["C5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._13C5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C4.wav");
+            mixer.AddMixerInput(sampleProvider);
             c5Key.BackColor = Color.LightBlue;
         }
 
@@ -330,8 +312,8 @@ namespace VirtualPiano
         {
             if (isPressed["Cis5"] == true) return;
             isPressed["Cis5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._14Cis5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C#4.wav");
+            mixer.AddMixerInput(sampleProvider);
             cis5Key.BackColor = Color.LightBlue;
         }
 
@@ -345,8 +327,8 @@ namespace VirtualPiano
         {
             if (isPressed["D5"] == true) return;
             isPressed["D5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._15D5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D4.wav");
+            mixer.AddMixerInput(sampleProvider);
             d5Key.BackColor = Color.LightBlue;
         }
 
@@ -360,8 +342,8 @@ namespace VirtualPiano
         {
             if (isPressed["Dis5"] == true) return;
             isPressed["Dis5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._16Dis5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D#4.wav");
+            mixer.AddMixerInput(sampleProvider);
             dis5Key.BackColor = Color.LightBlue;
         }
 
@@ -375,8 +357,8 @@ namespace VirtualPiano
         {
             if (isPressed["E5"] == true) return;
             isPressed["E5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._17E5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\E4.wav");
+            mixer.AddMixerInput(sampleProvider);
             e5Key.BackColor = Color.LightBlue;
         }
 
@@ -390,8 +372,8 @@ namespace VirtualPiano
         {
             if (isPressed["F5"] == true) return;
             isPressed["F5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._18F5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F4.wav");
+            mixer.AddMixerInput(sampleProvider);
             f5Key.BackColor = Color.LightBlue;
         }
 
@@ -405,8 +387,8 @@ namespace VirtualPiano
         {
             if (isPressed["Fis5"] == true) return;
             isPressed["Fis5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._19Fis5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F#4.wav");
+            mixer.AddMixerInput(sampleProvider);
             fis5Key.BackColor = Color.LightBlue;
         }
 
@@ -420,8 +402,8 @@ namespace VirtualPiano
         {
             if (isPressed["G5"] == true) return;
             isPressed["G5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._20G5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G4.wav");
+            mixer.AddMixerInput(sampleProvider);
             g5Key.BackColor = Color.LightBlue;
         }
 
@@ -435,8 +417,8 @@ namespace VirtualPiano
         {
             if (isPressed["Gis5"] == true) return;
             isPressed["Gis5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._21Gis5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G#4.wav");
+            mixer.AddMixerInput(sampleProvider);
             gis5Key.BackColor = Color.LightBlue;
         }
 
@@ -450,8 +432,8 @@ namespace VirtualPiano
         {
             if (isPressed["A5"] == true) return;
             isPressed["A5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._22A5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A4.wav");
+            mixer.AddMixerInput(sampleProvider);
             a5Key.BackColor = Color.LightBlue;
         }
 
@@ -465,8 +447,8 @@ namespace VirtualPiano
         {
             if (isPressed["Ais5"] == true) return;
             isPressed["Ais5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._23Ais5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A#4.wav");
+            mixer.AddMixerInput(sampleProvider);
             ais5Key.BackColor = Color.LightBlue;
         }
 
@@ -480,8 +462,8 @@ namespace VirtualPiano
         {
             if (isPressed["B5"] == true) return;
             isPressed["B5"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._24B5);
-            mixer.AddMixerInput(audioFile);
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\B4.wav");
+            mixer.AddMixerInput(sampleProvider);
             b5Key.BackColor = Color.LightBlue;
         }
 
@@ -495,9 +477,8 @@ namespace VirtualPiano
         {
             if (isPressed["C6"] == true) return;
             isPressed["C6"] = true;
-            audioFile = new WaveFileReader(Properties.Resources._25C6);
-            mixer.AddMixerInput(audioFile);
-           // mixer.RemoveMixerInput()
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C5.wav");
+            mixer.AddMixerInput(sampleProvider);
             c6Key.BackColor = Color.LightBlue;
         }
 
@@ -505,6 +486,33 @@ namespace VirtualPiano
         {
             isPressed["C6"] = false;
             c6Key.BackColor = Color.White;
+        }
+
+        private void GrandPianoCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+          
+            if (grandPianoCheckBox.Checked == true)
+            {
+                SynthesizedCheckBox.Checked = false;
+                tembre = "GrandPiano";
+            }
+            else
+            {
+                SynthesizedCheckBox.Checked = true;
+            }
+        }
+
+        private void SynthesizedCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (SynthesizedCheckBox.Checked == true)
+            {
+                grandPianoCheckBox.Checked = false;
+                tembre = "SynthesizedPiano";
+            }
+            else
+            {
+                grandPianoCheckBox.Checked = true;
+            }
         }
     }
 }
