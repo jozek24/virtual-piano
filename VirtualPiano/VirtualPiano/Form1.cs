@@ -116,7 +116,6 @@ namespace VirtualPiano
 
         private void C4Key_MouseDown(object sender, MouseEventArgs e)
         {
-
             if (isPressed["C4"] == true) return;
             isPressed["C4"] = true;
             sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C3.wav");
@@ -128,7 +127,7 @@ namespace VirtualPiano
         private void C4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["C4"] = false;
-            c4Key.BackColor = Color.White;
+            c4Key.BackColor = Color.FromArgb(224, 224, 224);
             if(sustainCheckBox.Checked==false)
                mixer.RemoveMixerInput(sampleProvider);   //to stop sound when mouseUp
         }
@@ -164,7 +163,7 @@ namespace VirtualPiano
         private void D4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["D4"] = false;
-            d4Key.BackColor = Color.White;
+            d4Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -199,7 +198,7 @@ namespace VirtualPiano
         private void E4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["E4"] = false;
-            e4Key.BackColor = Color.White;
+            e4Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -216,7 +215,7 @@ namespace VirtualPiano
         private void F4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["F4"] = false;
-            f4Key.BackColor = Color.White;
+            f4Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -250,7 +249,7 @@ namespace VirtualPiano
         private void G4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["G4"] = false;
-            g4Key.BackColor = Color.White;
+            g4Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -284,7 +283,7 @@ namespace VirtualPiano
         private void A4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["A4"] = false;
-            a4Key.BackColor = Color.White;
+            a4Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -318,7 +317,7 @@ namespace VirtualPiano
         private void B4Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["B4"] = false;
-            b4Key.BackColor = Color.White;
+            b4Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -335,7 +334,7 @@ namespace VirtualPiano
         private void C5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["C5"] = false;
-            c5Key.BackColor = Color.White;
+            c5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -369,7 +368,7 @@ namespace VirtualPiano
         private void D5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["D5"] = false;
-            d5Key.BackColor = Color.White;
+            d5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -403,7 +402,7 @@ namespace VirtualPiano
         private void E5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["E5"] = false;
-            e5Key.BackColor = Color.White;
+            e5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -420,7 +419,7 @@ namespace VirtualPiano
         private void F5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["F5"] = false;
-            f5Key.BackColor = Color.White;
+            f5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -454,7 +453,7 @@ namespace VirtualPiano
         private void G5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["G5"] = false;
-            g5Key.BackColor = Color.White;
+            g5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -488,7 +487,7 @@ namespace VirtualPiano
         private void A5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["A5"] = false;
-            a5Key.BackColor = Color.White;
+            a5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -522,7 +521,7 @@ namespace VirtualPiano
         private void B5Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["B5"] = false;
-            b5Key.BackColor = Color.White;
+            b5Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }
@@ -539,7 +538,7 @@ namespace VirtualPiano
         private void C6Key_MouseUp(object sender, MouseEventArgs e)
         {
             isPressed["C6"] = false;
-            c6Key.BackColor = Color.White;
+            c6Key.BackColor = Color.FromArgb(224, 224, 224);
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
         }

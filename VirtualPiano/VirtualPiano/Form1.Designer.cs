@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.c6Key = new System.Windows.Forms.Button();
             this.ais5Key = new System.Windows.Forms.Button();
@@ -92,14 +93,14 @@
             this.panel1.Controls.Add(this.e4Key);
             this.panel1.Controls.Add(this.d4Key);
             this.panel1.Controls.Add(this.c4Key);
-            this.panel1.Location = new System.Drawing.Point(22, 83);
+            this.panel1.Location = new System.Drawing.Point(29, 86);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1262, 372);
             this.panel1.TabIndex = 0;
             // 
             // c6Key
             // 
-            this.c6Key.BackColor = System.Drawing.Color.White;
+            this.c6Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.c6Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.c6Key.FlatAppearance.BorderSize = 2;
             this.c6Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -266,7 +267,7 @@
             // 
             // b5Key
             // 
-            this.b5Key.BackColor = System.Drawing.Color.White;
+            this.b5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.b5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.b5Key.FlatAppearance.BorderSize = 2;
             this.b5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -283,7 +284,7 @@
             // 
             // a5Key
             // 
-            this.a5Key.BackColor = System.Drawing.Color.White;
+            this.a5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.a5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.a5Key.FlatAppearance.BorderSize = 2;
             this.a5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -300,7 +301,7 @@
             // 
             // g5Key
             // 
-            this.g5Key.BackColor = System.Drawing.Color.White;
+            this.g5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.g5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.g5Key.FlatAppearance.BorderSize = 2;
             this.g5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -317,7 +318,7 @@
             // 
             // f5Key
             // 
-            this.f5Key.BackColor = System.Drawing.Color.White;
+            this.f5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.f5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.f5Key.FlatAppearance.BorderSize = 2;
             this.f5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -334,7 +335,7 @@
             // 
             // e5Key
             // 
-            this.e5Key.BackColor = System.Drawing.Color.White;
+            this.e5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.e5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.e5Key.FlatAppearance.BorderSize = 2;
             this.e5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -351,7 +352,7 @@
             // 
             // d5Key
             // 
-            this.d5Key.BackColor = System.Drawing.Color.White;
+            this.d5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.d5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.d5Key.FlatAppearance.BorderSize = 2;
             this.d5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -368,7 +369,7 @@
             // 
             // c5Key
             // 
-            this.c5Key.BackColor = System.Drawing.Color.White;
+            this.c5Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.c5Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.c5Key.FlatAppearance.BorderSize = 2;
             this.c5Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -385,7 +386,7 @@
             // 
             // b4Key
             // 
-            this.b4Key.BackColor = System.Drawing.Color.White;
+            this.b4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.b4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.b4Key.FlatAppearance.BorderSize = 2;
             this.b4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -402,7 +403,7 @@
             // 
             // f4Key
             // 
-            this.f4Key.BackColor = System.Drawing.Color.White;
+            this.f4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.f4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.f4Key.FlatAppearance.BorderSize = 2;
             this.f4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -419,7 +420,7 @@
             // 
             // g4Key
             // 
-            this.g4Key.BackColor = System.Drawing.Color.White;
+            this.g4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.g4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.g4Key.FlatAppearance.BorderSize = 2;
             this.g4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -436,7 +437,7 @@
             // 
             // a4Key
             // 
-            this.a4Key.BackColor = System.Drawing.Color.White;
+            this.a4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.a4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.a4Key.FlatAppearance.BorderSize = 2;
             this.a4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -453,7 +454,7 @@
             // 
             // e4Key
             // 
-            this.e4Key.BackColor = System.Drawing.Color.White;
+            this.e4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.e4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.e4Key.FlatAppearance.BorderSize = 2;
             this.e4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -470,7 +471,7 @@
             // 
             // d4Key
             // 
-            this.d4Key.BackColor = System.Drawing.Color.White;
+            this.d4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.d4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.d4Key.FlatAppearance.BorderSize = 2;
             this.d4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -487,7 +488,7 @@
             // 
             // c4Key
             // 
-            this.c4Key.BackColor = System.Drawing.Color.White;
+            this.c4Key.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.c4Key.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.c4Key.FlatAppearance.BorderSize = 2;
             this.c4Key.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -509,7 +510,7 @@
             this.tembreBox.Controls.Add(this.grandPianoCheckBox);
             this.tembreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tembreBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tembreBox.Location = new System.Drawing.Point(22, 13);
+            this.tembreBox.Location = new System.Drawing.Point(29, 13);
             this.tembreBox.Name = "tembreBox";
             this.tembreBox.Size = new System.Drawing.Size(368, 67);
             this.tembreBox.TabIndex = 1;
@@ -569,14 +570,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1316, 467);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tembreBox);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MinimumSize = new System.Drawing.Size(1334, 514);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Virtual Piano";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown_1);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
