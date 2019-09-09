@@ -46,6 +46,9 @@ namespace VirtualPiano
         {
             InitializeComponent();
 
+           
+
+
             outputDevice = new WaveOutEvent();
             mixer = new MixingSampleProvider(WaveFormat.CreateIeeeFloatWaveFormat(44100, 2))
             {
@@ -98,7 +101,6 @@ namespace VirtualPiano
 
             switch (e.KeyCode)
             {
-              //  case Keys.S: Break;
                 case Keys.Z: C4Key_MouseUp(null, null); break;
                 case Keys.S: Cis4Key_MouseUp(null, null); break;
                 case Keys.X: D4Key_MouseUp(null, null); break;
@@ -134,7 +136,7 @@ namespace VirtualPiano
             isPressed["C4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._1C4);
             mixer.AddMixerInput(audioFile);
-            c4Key.BackColor = Color.Red;
+            c4Key.BackColor = Color.LightBlue;
         }
 
 
@@ -150,7 +152,7 @@ namespace VirtualPiano
             isPressed["Cis4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._2Cis4);
             mixer.AddMixerInput(audioFile);
-            cis4Key.BackColor = Color.Red;
+            cis4Key.BackColor = Color.LightBlue;
         }
 
         private void Cis4Key_MouseUp(object sender, MouseEventArgs e)
@@ -165,7 +167,7 @@ namespace VirtualPiano
             isPressed["D4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._3D4);
             mixer.AddMixerInput(audioFile);
-            d4Key.BackColor = Color.Red;
+            d4Key.BackColor = Color.LightBlue;
         }
 
         private void D4Key_MouseUp(object sender, MouseEventArgs e)
@@ -180,7 +182,7 @@ namespace VirtualPiano
             isPressed["Dis4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._4Dis4);
             mixer.AddMixerInput(audioFile);
-            dis4Key.BackColor = Color.Red;
+            dis4Key.BackColor = Color.LightBlue;
         }
 
         private void Dis4Key_MouseUp(object sender, MouseEventArgs e)
@@ -195,7 +197,7 @@ namespace VirtualPiano
             isPressed["E4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._5E4);
             mixer.AddMixerInput(audioFile);
-            e4Key.BackColor = Color.Red;
+            e4Key.BackColor = Color.LightBlue;
         }
 
         private void E4Key_MouseUp(object sender, MouseEventArgs e)
@@ -210,7 +212,7 @@ namespace VirtualPiano
             isPressed["F4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._6F4);
             mixer.AddMixerInput(audioFile);
-            f4Key.BackColor = Color.Red;
+            f4Key.BackColor = Color.LightBlue;
         }
 
         private void F4Key_MouseUp(object sender, MouseEventArgs e)
@@ -225,7 +227,7 @@ namespace VirtualPiano
             isPressed["Fis4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._7Fis4);
             mixer.AddMixerInput(audioFile);
-            fis4Key.BackColor = Color.Red;
+            fis4Key.BackColor = Color.LightBlue;
         }
 
         private void Fis4Key_MouseUp(object sender, MouseEventArgs e)
@@ -240,7 +242,7 @@ namespace VirtualPiano
             isPressed["G4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._8G4);
             mixer.AddMixerInput(audioFile);
-            g4Key.BackColor = Color.Red;
+            g4Key.BackColor = Color.LightBlue;
         }
 
         private void G4Key_MouseUp(object sender, MouseEventArgs e)
@@ -255,7 +257,7 @@ namespace VirtualPiano
             isPressed["Gis4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._9Gis4);
             mixer.AddMixerInput(audioFile);
-            gis4Key.BackColor = Color.Red;
+            gis4Key.BackColor = Color.LightBlue;
         }
 
         private void Gis4Key_MouseUp(object sender, MouseEventArgs e)
@@ -270,7 +272,7 @@ namespace VirtualPiano
             isPressed["A4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._10A4);
             mixer.AddMixerInput(audioFile);
-            a4Key.BackColor = Color.Red;
+            a4Key.BackColor = Color.LightBlue;
         }
 
         private void A4Key_MouseUp(object sender, MouseEventArgs e)
@@ -285,7 +287,7 @@ namespace VirtualPiano
             isPressed["Ais4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._11Ais4);
             mixer.AddMixerInput(audioFile);
-            ais4Key.BackColor = Color.Red;
+            ais4Key.BackColor = Color.LightBlue;
         }
 
         private void Ais4Key_MouseUp(object sender, MouseEventArgs e)
@@ -300,7 +302,7 @@ namespace VirtualPiano
             isPressed["B4"] = true;
             audioFile = new WaveFileReader(Properties.Resources._12B4);
             mixer.AddMixerInput(audioFile);
-            b4Key.BackColor = Color.Red;
+            b4Key.BackColor = Color.LightBlue;
         }
 
         private void B4Key_MouseUp(object sender, MouseEventArgs e)
@@ -315,7 +317,7 @@ namespace VirtualPiano
             isPressed["C5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._13C5);
             mixer.AddMixerInput(audioFile);
-            c5Key.BackColor = Color.Red;
+            c5Key.BackColor = Color.LightBlue;
         }
 
         private void C5Key_MouseUp(object sender, MouseEventArgs e)
@@ -330,7 +332,7 @@ namespace VirtualPiano
             isPressed["Cis5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._14Cis5);
             mixer.AddMixerInput(audioFile);
-            cis5Key.BackColor = Color.Red;
+            cis5Key.BackColor = Color.LightBlue;
         }
 
         private void Cis5Key_MouseUp(object sender, MouseEventArgs e)
@@ -345,7 +347,7 @@ namespace VirtualPiano
             isPressed["D5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._15D5);
             mixer.AddMixerInput(audioFile);
-            d5Key.BackColor = Color.Red;
+            d5Key.BackColor = Color.LightBlue;
         }
 
         private void D5Key_MouseUp(object sender, MouseEventArgs e)
@@ -360,7 +362,7 @@ namespace VirtualPiano
             isPressed["Dis5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._16Dis5);
             mixer.AddMixerInput(audioFile);
-            dis5Key.BackColor = Color.Red;
+            dis5Key.BackColor = Color.LightBlue;
         }
 
         private void Dis5Key_MouseUp(object sender, MouseEventArgs e)
@@ -375,7 +377,7 @@ namespace VirtualPiano
             isPressed["E5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._17E5);
             mixer.AddMixerInput(audioFile);
-            e5Key.BackColor = Color.Red;
+            e5Key.BackColor = Color.LightBlue;
         }
 
         private void E5Key_MouseUp(object sender, MouseEventArgs e)
@@ -390,7 +392,7 @@ namespace VirtualPiano
             isPressed["F5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._18F5);
             mixer.AddMixerInput(audioFile);
-            f5Key.BackColor = Color.Red;
+            f5Key.BackColor = Color.LightBlue;
         }
 
         private void F5Key_MouseUp(object sender, MouseEventArgs e)
@@ -405,7 +407,7 @@ namespace VirtualPiano
             isPressed["Fis5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._19Fis5);
             mixer.AddMixerInput(audioFile);
-            fis5Key.BackColor = Color.Red;
+            fis5Key.BackColor = Color.LightBlue;
         }
 
         private void Fis5Key_MouseUp(object sender, MouseEventArgs e)
@@ -420,7 +422,7 @@ namespace VirtualPiano
             isPressed["G5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._20G5);
             mixer.AddMixerInput(audioFile);
-            g5Key.BackColor = Color.Red;
+            g5Key.BackColor = Color.LightBlue;
         }
 
         private void G5Key_MouseUp(object sender, MouseEventArgs e)
@@ -435,7 +437,7 @@ namespace VirtualPiano
             isPressed["Gis5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._21Gis5);
             mixer.AddMixerInput(audioFile);
-            gis5Key.BackColor = Color.Red;
+            gis5Key.BackColor = Color.LightBlue;
         }
 
         private void Gis5Key_MouseUp(object sender, MouseEventArgs e)
@@ -450,7 +452,7 @@ namespace VirtualPiano
             isPressed["A5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._22A5);
             mixer.AddMixerInput(audioFile);
-            a5Key.BackColor = Color.Red;
+            a5Key.BackColor = Color.LightBlue;
         }
 
         private void A5Key_MouseUp(object sender, MouseEventArgs e)
@@ -465,7 +467,7 @@ namespace VirtualPiano
             isPressed["Ais5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._23Ais5);
             mixer.AddMixerInput(audioFile);
-            ais5Key.BackColor = Color.Red;
+            ais5Key.BackColor = Color.LightBlue;
         }
 
         private void Ais5Key_MouseUp(object sender, MouseEventArgs e)
@@ -480,7 +482,7 @@ namespace VirtualPiano
             isPressed["B5"] = true;
             audioFile = new WaveFileReader(Properties.Resources._24B5);
             mixer.AddMixerInput(audioFile);
-            b5Key.BackColor = Color.Red;
+            b5Key.BackColor = Color.LightBlue;
         }
 
         private void B5Key_MouseUp(object sender, MouseEventArgs e)
@@ -495,7 +497,8 @@ namespace VirtualPiano
             isPressed["C6"] = true;
             audioFile = new WaveFileReader(Properties.Resources._25C6);
             mixer.AddMixerInput(audioFile);
-            c6Key.BackColor = Color.Red;
+           // mixer.RemoveMixerInput()
+            c6Key.BackColor = Color.LightBlue;
         }
 
         private void C6Key_MouseUp(object sender, MouseEventArgs e)
