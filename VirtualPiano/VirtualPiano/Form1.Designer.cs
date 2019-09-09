@@ -57,8 +57,11 @@
             this.tembreBox = new System.Windows.Forms.GroupBox();
             this.grandPianoCheckBox = new System.Windows.Forms.CheckBox();
             this.SynthesizedCheckBox = new System.Windows.Forms.CheckBox();
+            this.sustainCheckBox = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.tembreBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -501,12 +504,14 @@
             // 
             // tembreBox
             // 
+            this.tembreBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.tembreBox.Controls.Add(this.SynthesizedCheckBox);
             this.tembreBox.Controls.Add(this.grandPianoCheckBox);
+            this.tembreBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.tembreBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.tembreBox.Location = new System.Drawing.Point(22, 13);
             this.tembreBox.Name = "tembreBox";
-            this.tembreBox.Size = new System.Drawing.Size(336, 67);
+            this.tembreBox.Size = new System.Drawing.Size(368, 67);
             this.tembreBox.TabIndex = 1;
             this.tembreBox.TabStop = false;
             this.tembreBox.Text = "Tembre";
@@ -514,9 +519,10 @@
             // grandPianoCheckBox
             // 
             this.grandPianoCheckBox.AutoSize = true;
+            this.grandPianoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.grandPianoCheckBox.Location = new System.Drawing.Point(7, 22);
             this.grandPianoCheckBox.Name = "grandPianoCheckBox";
-            this.grandPianoCheckBox.Size = new System.Drawing.Size(110, 21);
+            this.grandPianoCheckBox.Size = new System.Drawing.Size(143, 29);
             this.grandPianoCheckBox.TabIndex = 0;
             this.grandPianoCheckBox.Text = "Grand Piano";
             this.grandPianoCheckBox.UseVisualStyleBackColor = true;
@@ -525,13 +531,39 @@
             // SynthesizedCheckBox
             // 
             this.SynthesizedCheckBox.AutoSize = true;
-            this.SynthesizedCheckBox.Location = new System.Drawing.Point(136, 21);
+            this.SynthesizedCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SynthesizedCheckBox.Location = new System.Drawing.Point(156, 22);
             this.SynthesizedCheckBox.Name = "SynthesizedCheckBox";
-            this.SynthesizedCheckBox.Size = new System.Drawing.Size(147, 21);
+            this.SynthesizedCheckBox.Size = new System.Drawing.Size(197, 29);
             this.SynthesizedCheckBox.TabIndex = 1;
             this.SynthesizedCheckBox.Text = "Synthesized Piano";
             this.SynthesizedCheckBox.UseVisualStyleBackColor = true;
             this.SynthesizedCheckBox.CheckedChanged += new System.EventHandler(this.SynthesizedCheckBox_CheckedChanged);
+            // 
+            // sustainCheckBox
+            // 
+            this.sustainCheckBox.AutoSize = true;
+            this.sustainCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sustainCheckBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.sustainCheckBox.Location = new System.Drawing.Point(31, 23);
+            this.sustainCheckBox.Name = "sustainCheckBox";
+            this.sustainCheckBox.Size = new System.Drawing.Size(100, 29);
+            this.sustainCheckBox.TabIndex = 2;
+            this.sustainCheckBox.Text = "Sustain";
+            this.sustainCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.sustainCheckBox);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Location = new System.Drawing.Point(413, 13);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(197, 67);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Click space to change";
             // 
             // Form1
             // 
@@ -539,6 +571,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1316, 467);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tembreBox);
             this.Controls.Add(this.panel1);
             this.KeyPreview = true;
@@ -549,6 +582,8 @@
             this.panel1.ResumeLayout(false);
             this.tembreBox.ResumeLayout(false);
             this.tembreBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -584,6 +619,8 @@
         private System.Windows.Forms.GroupBox tembreBox;
         private System.Windows.Forms.CheckBox SynthesizedCheckBox;
         private System.Windows.Forms.CheckBox grandPianoCheckBox;
+        private System.Windows.Forms.CheckBox sustainCheckBox;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
