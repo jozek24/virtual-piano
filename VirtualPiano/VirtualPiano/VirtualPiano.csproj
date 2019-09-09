@@ -63,19 +63,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -86,79 +86,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\1C4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\2Cis4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\3D4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\4Dis4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\5E4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\6F4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\7Fis4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\8G4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\9Gis4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\10A4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\11Ais4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\12B4.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\13C5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\14Cis5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\15D5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\16Dis5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\17E5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\18F5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\19Fis5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\20G5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\21Gis5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\22A5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\23Ais5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\24B5.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\SynthesizedPianoNotes\25C6.wav" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
