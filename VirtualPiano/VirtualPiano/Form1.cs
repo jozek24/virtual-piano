@@ -11,20 +11,19 @@ namespace VirtualPiano
     {
         Dictionary<string, bool> isPressed = new Dictionary<string, bool>()
         {
-            {"C4",false }, { "Cis4",false }, { "D4",false },{ "Dis4",false },
-            { "E4",false }, { "F4",false },  { "Fis4",false }, { "G4",false },
-            { "Gis4",false },{ "A4",false },{ "Ais4",false }, { "B4",false },
-            { "C5",false }, { "Cis5",false },{ "D5",false },{ "Dis5",false },
-            { "E5",false }, { "F5",false },{ "Fis5",false }, { "G5",false },
-            { "Gis5",false }, { "A5",false },{ "Ais5",false }, { "B5",false },
-            { "C6",false }
+            {"C3",false }, { "C#3",false }, { "D3",false },{ "D#3",false },
+            { "E3",false }, { "F3",false },  { "F#3",false }, { "G3",false },
+            { "G#3",false },{ "A3",false },{ "A#3",false }, { "B3",false },
+            { "C4",false }, { "C#4",false },{ "D4",false },{ "D#4",false },
+            { "E4",false }, { "F4",false },{ "F#4",false }, { "G4",false },
+            { "G#4",false }, { "A4",false },{ "A#4",false }, { "B4",false },
+            { "C5",false }
         };
         private WaveOutEvent outputDevice;
         private ISampleProvider sampleProvider;
         private MixingSampleProvider mixer;
 
         string tembre = "GrandPiano";
-        bool sustain = true;
 
         public Form1()
         {
@@ -34,11 +33,13 @@ namespace VirtualPiano
             outputDevice = new WaveOutEvent();
             mixer = new MixingSampleProvider(WaveFormat.CreateIeeeFloatWaveFormat(44100, 2))
             {
-                ReadFully = true  //ustawia niekończączy się stream
+                ReadFully = true
             };
             outputDevice.Init(mixer);
             outputDevice.Play();
         }
+
+        #region keyUp and keyDown
         private void Form1_KeyDown_1(object sender, KeyEventArgs e)
         {
             e.Handled = true;
@@ -51,31 +52,31 @@ namespace VirtualPiano
                         sustainCheckBox.Checked = !sustainCheckBox.Checked;
                         break;
                     }
-                case Keys.Z: C4Key_MouseDown(null, null); break;
-                case Keys.S: Cis4Key_MouseDown(null, null); break;
-                case Keys.X: D4Key_MouseDown(null, null); break;
-                case Keys.D: Dis4Key_MouseDown(null, null); break;
-                case Keys.C: E4Key_MouseDown(null, null); break;
-                case Keys.V: F4Key_MouseDown(null, null); break;
-                case Keys.G: Fis4Key_MouseDown(null, null); break;
-                case Keys.B: G4Key_MouseDown(null, null); break;
-                case Keys.H: Gis4Key_MouseDown(null, null); break;
-                case Keys.N: A4Key_MouseDown(null, null); break;
-                case Keys.J: Ais4Key_MouseDown(null, null); break;
-                case Keys.M: B4Key_MouseDown(null, null); break;
-                case Keys.Q: C5Key_MouseDown(null, null); break;
-                case Keys.D2: Cis5Key_MouseDown(null, null); break;
-                case Keys.W: D5Key_MouseDown(null, null); break;
-                case Keys.D3: Dis5Key_MouseDown(null, null); break;
-                case Keys.E: E5Key_MouseDown(null, null); break;
-                case Keys.R: F5Key_MouseDown(null, null); break;
-                case Keys.D5: Fis5Key_MouseDown(null, null); break;
-                case Keys.T: G5Key_MouseDown(null, null); break;
-                case Keys.D6: Gis5Key_MouseDown(null, null); break;
-                case Keys.Y: A5Key_MouseDown(null, null); break;
-                case Keys.D7: Ais5Key_MouseDown(null, null); break;
-                case Keys.U: B5Key_MouseDown(null, null); break;
-                case Keys.I: C6Key_MouseDown(null, null); break;
+                case Keys.Z: C3Key_MouseDown(c3Key, null); break;
+                case Keys.S: Cis3Key_MouseDown(cis3Key, null); break;
+                case Keys.X: D3Key_MouseDown(d3Key, null); break;
+                case Keys.D: Dis3Key_MouseDown(dis3Key, null); break;
+                case Keys.C: E3Key_MouseDown(e3Key, null); break;
+                case Keys.V: F3Key_MouseDown(f3Key, null); break;
+                case Keys.G: Fis3Key_MouseDown(fis3Key, null); break;
+                case Keys.B: G3Key_MouseDown(g3Key, null); break;
+                case Keys.H: Gis3Key_MouseDown(gis3Key, null); break;
+                case Keys.N: A3Key_MouseDown(a3Key, null); break;
+                case Keys.J: Ais3Key_MouseDown(ais3Key, null); break;
+                case Keys.M: B3Key_MouseDown(b3Key, null); break;
+                case Keys.Q: C4Key_MouseDown(c4Key, null); break;
+                case Keys.D2: Cis4Key_MouseDown(cis4Key, null); break;
+                case Keys.W: D4Key_MouseDown(d4Key, null); break;
+                case Keys.D3: Dis4Key_MouseDown(dis4Key, null); break;
+                case Keys.E: E4Key_MouseDown(e4Key, null); break;
+                case Keys.R: F4Key_MouseDown(f4Key, null); break;
+                case Keys.D5: Fis4Key_MouseDown(fis4Key, null); break;
+                case Keys.T: G4Key_MouseDown(g4Key, null); break;
+                case Keys.D6: Gis4Key_MouseDown(gis4Key, null); break;
+                case Keys.Y: A4Key_MouseDown(a4Key, null); break;
+                case Keys.D7: Ais4Key_MouseDown(ais4Key, null); break;
+                case Keys.U: B4Key_MouseDown(b4Key, null); break;
+                case Keys.I: C5Key_MouseDown(c5Key, null); break;
                 default: e.Handled = true; break;
             };
         }
@@ -85,489 +86,137 @@ namespace VirtualPiano
 
             switch (e.KeyCode)
             {
-                case Keys.Z: C4Key_MouseUp(null, null); break;
-                case Keys.S: Cis4Key_MouseUp(null, null); break;
-                case Keys.X: D4Key_MouseUp(null, null); break;
-                case Keys.D: Dis4Key_MouseUp(null, null); break;
-                case Keys.C: E4Key_MouseUp(null, null); break;
-                case Keys.V: F4Key_MouseUp(null, null); break;
-                case Keys.G: Fis4Key_MouseUp(null, null); break;
-                case Keys.B: G4Key_MouseUp(null, null); break;
-                case Keys.H: Gis4Key_MouseUp(null, null); break;
-                case Keys.N: A4Key_MouseUp(null, null); break;
-                case Keys.J: Ais4Key_MouseUp(null, null); break;
-                case Keys.M: B4Key_MouseUp(null, null); break;
-                case Keys.Q: C5Key_MouseUp(null, null); break;
-                case Keys.D2: Cis5Key_MouseUp(null, null); break;
-                case Keys.W: D5Key_MouseUp(null, null); break;
-                case Keys.D3: Dis5Key_MouseUp(null, null); break;
-                case Keys.E: E5Key_MouseUp(null, null); break;
-                case Keys.R: F5Key_MouseUp(null, null); break;
-                case Keys.D5: Fis5Key_MouseUp(null, null); break;
-                case Keys.T: G5Key_MouseUp(null, null); break;
-                case Keys.D6: Gis5Key_MouseUp(null, null); break;
-                case Keys.Y: A5Key_MouseUp(null, null); break;
-                case Keys.D7: Ais5Key_MouseUp(null, null); break;
-                case Keys.U: B5Key_MouseUp(null, null); break;
-                case Keys.I: C6Key_MouseUp(null, null); break;
+                case Keys.Z: C3Key_MouseUp(c3Key, null); break;
+                case Keys.S: Cis3Key_MouseUp(cis3Key, null); break;
+                case Keys.X: D3Key_MouseUp(d3Key, null); break;
+                case Keys.D: Dis3Key_MouseUp(dis3Key, null); break;
+                case Keys.C: E3Key_MouseUp(e3Key, null); break;
+                case Keys.V: F3Key_MouseUp(f3Key, null); break;
+                case Keys.G: Fis3Key_MouseUp(fis3Key, null); break;
+                case Keys.B: G3Key_MouseUp(g3Key, null); break;
+                case Keys.H: Gis3Key_MouseUp(gis3Key, null); break;
+                case Keys.N: A3Key_MouseUp(a3Key, null); break;
+                case Keys.J: Ais3Key_MouseUp(ais3Key, null); break;
+                case Keys.M: B3Key_MouseUp(b3Key, null); break;
+                case Keys.Q: C4Key_MouseUp(c4Key, null); break;
+                case Keys.D2: Cis4Key_MouseUp(cis4Key, null); break;
+                case Keys.W: D4Key_MouseUp(d4Key, null); break;
+                case Keys.D3: Dis4Key_MouseUp(dis4Key, null); break;
+                case Keys.E: E4Key_MouseUp(e4Key, null); break;
+                case Keys.R: F4Key_MouseUp(f4Key, null); break;
+                case Keys.D5: Fis4Key_MouseUp(fis4Key, null); break;
+                case Keys.T: G4Key_MouseUp(g4Key, null); break;
+                case Keys.D6: Gis4Key_MouseUp(gis4Key, null); break;
+                case Keys.Y: A4Key_MouseUp(a4Key, null); break;
+                case Keys.D7: Ais4Key_MouseUp(ais4Key, null); break;
+                case Keys.U: B4Key_MouseUp(b4Key, null); break;
+                case Keys.I: C5Key_MouseUp(c5Key, null); break;
                 default: e.Handled = true; break;
             };
         }
+        #endregion
 
-        private void C4Key_MouseDown(object sender, MouseEventArgs e)
+        private void PlayKeySound(string tone, object sender)
         {
-            if (isPressed["C4"] == true) return;
-            isPressed["C4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C3.wav");
+            if (isPressed[tone] == true) return;
+            isPressed[tone] = true;
+            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\{tone}.wav");
             mixer.AddMixerInput(sampleProvider);
-            c4Key.BackColor = Color.LightBlue;
+
+            Button button = sender as Button;
+            if (button != null)
+                button.BackColor = Color.LightBlue;
         }
-
-
-        private void C4Key_MouseUp(object sender, MouseEventArgs e)
+        private void StopTone(string tone, object sender)
         {
-            isPressed["C4"] = false;
-            c4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if(sustainCheckBox.Checked==false)
-               mixer.RemoveMixerInput(sampleProvider);   //to stop sound when mouseUp
-        }
-
-        private void Cis4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Cis4"] == true) return;
-            isPressed["Cis4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C#3.wav");
-
-            mixer.AddMixerInput(sampleProvider);
-            cis4Key.BackColor = Color.LightBlue;
-        }
-
-        private void Cis4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Cis4"] = false;
-            cis4Key.BackColor = Color.Black;
+            isPressed[tone] = false;
             if (sustainCheckBox.Checked == false)
                 mixer.RemoveMixerInput(sampleProvider);
+
+            if (tone.Contains("#"))
+            {
+                Button button1 = sender as Button;
+                if (button1 != null)
+                    button1.BackColor = Color.Black;
+                return;
+            }
+            Button button = sender as Button;
+            if (button != null)
+                button.BackColor = Color.FromArgb(224, 224, 224);
         }
 
-        private void D4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["D4"] == true) return;
-            isPressed["D4"] = true;
-
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            d4Key.BackColor = Color.LightBlue;
-        }
-
-        private void D4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["D4"] = false;
-            d4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Dis4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Dis4"] == true) return;
-            isPressed["Dis4"] = true;
-
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D#3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            dis4Key.BackColor = Color.LightBlue;
-        }
-
-        private void Dis4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Dis4"] = false;
-            dis4Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void E4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["E4"] == true) return;
-            isPressed["E4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\E3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            e4Key.BackColor = Color.LightBlue;
-        }
-
-        private void E4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["E4"] = false;
-            e4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void F4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["F4"] == true) return;
-            isPressed["F4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            f4Key.BackColor = Color.LightBlue;
-        }
-
-        private void F4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["F4"] = false;
-            f4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Fis4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Fis4"] == true) return;
-            isPressed["Fis4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F#3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            fis4Key.BackColor = Color.LightBlue;
-        }
-
-        private void Fis4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Fis4"] = false;
-            fis4Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void G4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["G4"] == true) return;
-            isPressed["G4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            g4Key.BackColor = Color.LightBlue;
-        }
-
-        private void G4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["G4"] = false;
-            g4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Gis4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Gis4"] == true) return;
-            isPressed["Gis4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G#3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            gis4Key.BackColor = Color.LightBlue;
-        }
-
-        private void Gis4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Gis4"] = false;
-            gis4Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void A4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["A4"] == true) return;
-            isPressed["A4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            a4Key.BackColor = Color.LightBlue;
-        }
-
-        private void A4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["A4"] = false;
-            a4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Ais4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Ais4"] == true) return;
-            isPressed["Ais4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A#3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            ais4Key.BackColor = Color.LightBlue;
-        }
-
-        private void Ais4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Ais4"] = false;
-            ais4Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void B4Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["B4"] == true) return;
-            isPressed["B4"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\B3.wav");
-            mixer.AddMixerInput(sampleProvider);
-            b4Key.BackColor = Color.LightBlue;
-        }
-
-        private void B4Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["B4"] = false;
-            b4Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void C5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["C5"] == true) return;
-            isPressed["C5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            c5Key.BackColor = Color.LightBlue;
-        }
-
-        private void C5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["C5"] = false;
-            c5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Cis5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Cis5"] == true) return;
-            isPressed["Cis5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C#4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            cis5Key.BackColor = Color.LightBlue;
-        }
-
-        private void Cis5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Cis5"] = false;
-            cis5Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void D5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["D5"] == true) return;
-            isPressed["D5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            d5Key.BackColor = Color.LightBlue;
-        }
-
-        private void D5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["D5"] = false;
-            d5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Dis5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Dis5"] == true) return;
-            isPressed["Dis5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\D#4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            dis5Key.BackColor = Color.LightBlue;
-        }
-
-        private void Dis5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Dis5"] = false;
-            dis5Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void E5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["E5"] == true) return;
-            isPressed["E5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\E4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            e5Key.BackColor = Color.LightBlue;
-        }
-
-        private void E5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["E5"] = false;
-            e5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void F5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["F5"] == true) return;
-            isPressed["F5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            f5Key.BackColor = Color.LightBlue;
-        }
-
-        private void F5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["F5"] = false;
-            f5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Fis5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Fis5"] == true) return;
-            isPressed["Fis5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\F#4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            fis5Key.BackColor = Color.LightBlue;
-        }
-
-        private void Fis5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Fis5"] = false;
-            fis5Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void G5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["G5"] == true) return;
-            isPressed["G5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            g5Key.BackColor = Color.LightBlue;
-        }
-
-        private void G5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["G5"] = false;
-            g5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Gis5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Gis5"] == true) return;
-            isPressed["Gis5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\G#4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            gis5Key.BackColor = Color.LightBlue;
-        }
-
-        private void Gis5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Gis5"] = false;
-            gis5Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void A5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["A5"] == true) return;
-            isPressed["A5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            a5Key.BackColor = Color.LightBlue;
-        }
-
-        private void A5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["A5"] = false;
-            a5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void Ais5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["Ais5"] == true) return;
-            isPressed["Ais5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\A#4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            ais5Key.BackColor = Color.LightBlue;
-        }
-
-        private void Ais5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["Ais5"] = false;
-            ais5Key.BackColor = Color.Black;
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void B5Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["B5"] == true) return;
-            isPressed["B5"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\B4.wav");
-            mixer.AddMixerInput(sampleProvider);
-            b5Key.BackColor = Color.LightBlue;
-        }
-
-        private void B5Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["B5"] = false;
-            b5Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
-
-        private void C6Key_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (isPressed["C6"] == true) return;
-            isPressed["C6"] = true;
-            sampleProvider = new AudioFileReader($@"..\..\Resources\{tembre}\C5.wav");
-            mixer.AddMixerInput(sampleProvider);
-            c6Key.BackColor = Color.LightBlue;
-        }
-
-        private void C6Key_MouseUp(object sender, MouseEventArgs e)
-        {
-            isPressed["C6"] = false;
-            c6Key.BackColor = Color.FromArgb(224, 224, 224);
-            if (sustainCheckBox.Checked == false)
-                mixer.RemoveMixerInput(sampleProvider);
-        }
+        #region buttons
+        private void C3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("C3", sender);
+        private void C3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("C3", sender);
+        private void Cis3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("C#3", sender);
+        private void Cis3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("C#3", sender);
+        private void D3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("D3", sender);
+        private void D3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("D3", sender);
+        private void Dis3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("D#3", sender);
+        private void Dis3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("D#3", sender);
+        private void E3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("E3", sender);
+        private void E3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("E3", sender);
+        private void F3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("F3", sender);
+        private void F3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("F3", sender);
+        private void Fis3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("F#3", sender);
+        private void Fis3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("F#3", sender);
+        private void G3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("G3", sender);
+        private void G3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("G3", sender);
+        private void Gis3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("G#3", sender);
+        private void Gis3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("G#3", sender);
+        private void A3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("A3", sender);
+        private void A3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("A3", sender);
+        private void Ais3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("A#3", sender);
+        private void Ais3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("A#3", sender);
+        private void B3Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("B3", sender);
+        private void B3Key_MouseUp(object sender, MouseEventArgs e) => StopTone("B3", sender);
+        private void C4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("C4", sender);
+        private void C4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("C4", sender);
+        private void Cis4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("C#4", sender);
+        private void Cis4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("C#4", sender);
+        private void D4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("D4", sender);
+        private void D4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("D4", sender);
+        private void Dis4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("D#4", sender);
+        private void Dis4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("D#4", sender);
+        private void E4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("E4", sender);
+        private void E4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("E4", sender);
+        private void F4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("F4", sender);
+        private void F4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("F4", sender);
+        private void Fis4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("F#4", sender);
+        private void Fis4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("F#4", sender);
+        private void G4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("G4", sender);
+        private void G4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("G4", sender);
+        private void Gis4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("G#4", sender);
+        private void Gis4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("G#4", sender);
+        private void A4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("A4", sender);
+        private void A4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("A4", sender);
+        private void Ais4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("A#4", sender);
+        private void Ais4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("A#4", sender);
+        private void B4Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("B4", sender);
+        private void B4Key_MouseUp(object sender, MouseEventArgs e) => StopTone("B4", sender);
+        private void C5Key_MouseDown(object sender, MouseEventArgs e) => PlayKeySound("C5", sender);
+        private void C5Key_MouseUp(object sender, MouseEventArgs e) => StopTone("C5", sender);
+        #endregion
 
         private void GrandPianoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-          
-            if (grandPianoCheckBox.Checked == true)
-            {
-                SynthesizedCheckBox.Checked = false;
-                tembre = "GrandPiano";
-            }
-            else
+            if (grandPianoCheckBox.Checked != true)
             {
                 SynthesizedCheckBox.Checked = true;
+                return;
             }
+            SynthesizedCheckBox.Checked = false;
+            tembre = "GrandPiano";
         }
-
         private void SynthesizedCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (SynthesizedCheckBox.Checked == true)
-            {
-                grandPianoCheckBox.Checked = false;
-                tembre = "SynthesizedPiano";
-            }
-            else
+            if (SynthesizedCheckBox.Checked != true)
             {
                 grandPianoCheckBox.Checked = true;
+                return;
             }
+            grandPianoCheckBox.Checked = false;
+            tembre = "SynthesizedPiano";
         }
     }
 }
